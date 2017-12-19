@@ -5,9 +5,10 @@ int n,sum=0,i;
 printf("\n Enter a number");
 scanf("%d",&n);
 
-for(i=1;i<=n;++i)
+while(n>0)
 {
 sum=sum+i;
+  ++i;
 }
 
 printf("Sum is %d",sum);
