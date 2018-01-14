@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 
-	void divide(int a[],int srt,int end);
-	void merge(int a[],int strt,int mid,int end);
+	void division(int a[],int start,int end);
+	void merge(int a[],int start,int mid,int end);
 	int main(void)
 	{
 		int a[50];
@@ -12,30 +12,30 @@
 		{
 			scanf("%d",&a[i]);
 		}
-		divide(a,0,n-1);
+		division(a,0,n-1);
 		for(i=0;i<n;i++)
 		{
 			printf("%d",a[i]);
 		}
 	}
-	void divide(int a[],int strt,int end)
+	void division(int a[],int start,int end)
 	{
 		int mid;
 		
-		if(strt<end)
+		if(start<end)
 		{
 			mid=(strt+end)/2;
-			divide(a,strt,mid);
-			divide(a,mid+1,end);
-			merge(a,strt,mid,end);
+			division(a,start,mid);
+			division(a,mid+1,end);
+			merge(a,start,mid,end);
 			
 		}
 	}
-	void merge(int a[],int strt,int mid,int end)
+	void merge(int a[],int start,int mid,int end)
 	{
 		int i, mi, k, s, temp[50];
-		s = strt;
-		i = strt;
+		s = start;
+		i = start;
 		mi = mid + 1;
 		while ((s<= mid) && (mi <= end))
 		{
@@ -68,7 +68,7 @@
 			}
 		}
  
-		for (k = strt; k <= end; k++)
+		for (k = start; k <= end; k++)
 		{
 			a[k] = temp[k];
 		}
