@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 int main(void) {
-	float a,b;
-	scanf("%f %f",&a,&b);
+	float l,b;
+	scanf("%f %f",&l,&b);
 	float area;
-	area=a*b;
+	area=l*b;
 	printf("%.5f",area);
 	return 0;
 }
