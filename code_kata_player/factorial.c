@@ -9,6 +9,10 @@ int main(void) {
 		f+=f*i;
 		i++;
 	}
+	if(n==1||n==0)
+	{
+		f=1;
+	}
 printf("%d",f);
 
 
